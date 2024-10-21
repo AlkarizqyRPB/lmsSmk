@@ -102,7 +102,7 @@
                             </div>
 
                             <div class="col-12 text-center">
-                                <p>Don't have an account? <a class="text-decoration-none" href="signup.html">Signup</a></p>
+                                <p>Don't have an account? <a class="text-decoration-none" href="signup.php">Signup</a></p>
                             </div>
                         </div>
                     </form>

@@ -72,7 +72,7 @@ $all_product = $const->query($sql);
                                 <h1 class="display-3 text-white animated slideInDown">Belajar Lebih Interaktif dan Menyenangkan</h1>
                                 <p class=" text-white mb-4 pb-2">Akses materi pembelajaran, kuis, dan proyek interaktif yang memotivasi dan menginspirasi. Tingkatkan pengetahuan dan keterampilan Anda bersama kami.</p>
                                 
-                                <a href="signup.html" class="btn btn-light py-md-3 px-md-5 animated slideInRight">Gabung Sekarang</a>
+                                <a href="signup.php" class="btn btn-light py-md-3 px-md-5 animated slideInRight">Gabung Sekarang</a>
                             </div>
                         </div>
                     </div>
@@ -90,7 +90,7 @@ $all_product = $const->query($sql);
                                 </h1>
                                 <p class=" text-white mb-4 pb-2">Temukan beragam kursus untuk mengembangkan keahlian di bidang teknologi, bisnis, seni, dan lainnya. Raih sertifikat dan siap berkompetisi di dunia kerja.</p>
                                 
-                                <a href="signup.html" class="btn btn-light py-md-3 px-md-5 animated slideInRight">Mulai Belajar</a>
+                                <a href="courses.php" class="btn btn-light py-md-3 px-md-5 animated slideInRight">Mulai Belajar</a>
                             </div>
                         </div>
                     </div>
@@ -100,69 +100,10 @@ $all_product = $const->query($sql);
     </div>
     <!-- Carousel End -->
 
+    <?php require 'components/jurusan.php' ?>
 
-    <!-- Service Start -->
-    <div class="container-xxl py-5">
-        <div class="container">
-            <div class="row g-2 text-center">
-                <div class="col-12 wow fadeInUp" data-wow-delay="0.3s">
-                    <h1 style="color: #fb873f;">Kursus Kami Berdasarkan Jurusan</h1>
-                    <p class="mb-5">Cari kursus berdasarkan nama jurusan</p>
-                </div>
-            </div>
-            <div class="row g-4">
-                <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="service-item text-center pt-3 shadow">
-                        <div class="p-4">
-                            <img src="img/icon1.png" alt="" width="60px" class="mb-4">
-                            <h5 class="mb-3">TKRO</h5>
-                            <p>TEKNIK KENDARAAN RINGAN OTOMOTIF</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.7s">
-                    <div class="service-item text-center pt-3 shadow">
-                        <div class="p-4">
-                            <img src="img/icon1.png" alt="" width="60px" class="mb-4">
-                            <h5 class="mb-3">AKL</h5>
-                            <p>AKUNTANSI DAN KEUANGAN LEMBAGA</p>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.5s">
-                    <div class="service-item text-center pt-3 shadow">
-                        <div class="p-4">
-                            <img src="img/icon1.png" alt="" width="60px" class="mb-4">
-                            <h5 class="mb-3">TKJ</h5>
-                            <p>TEKNIK KOMPUTER DAN JARINGAN</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.5s">
-                    <div class="service-item text-center pt-3 shadow">
-                        <div class="p-4">
-                            <img src="img/icon1.png" alt="" width="60px" class="mb-4">
-                            <h5 class="mb-3">BDPM</h5>
-                            <p>BISNIS DARING DAN PEMASARAAN</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.3s">
-                    <div class="service-item text-center pt-3 shadow">
-                        <div class="p-4">
-                            <img src="img/icon1.png" alt="" width="60px" class="mb-4">
-                            <h5 class="mb-3">TOT</h5>
-                            <p>TEKNIK OTOTRONIK</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Service End -->
 
-   <!-- Courses Start -->
+   <!-- Pelajaran Start -->
     <?php while($row = mysqli_fetch_assoc($all_product)){
      ?>
     <div class="container-xxl py-5">
@@ -202,7 +143,7 @@ $all_product = $const->query($sql);
     <div class="container text-center">
         <a class="btn text-light py-3 px-5 mt-2 mb-5" href="courses.html">All Courses</a>
     </div>
-    <!-- Courses End -->
+    <!-- Pelajaran End -->
 
 
     <!-- Banner-2 Start -->
