@@ -1,7 +1,7 @@
 <?php 
 require 'connection.php';
 
-$sql = "SELECT * FROM mataPelajaran";
+$sql = "SELECT * FROM moduls";
 $all_product = $const->query($sql);
 
 ?>
@@ -57,48 +57,8 @@ $all_product = $const->query($sql);
     <!-- Spinner End -->
 
  <?php require 'components/navbar.php' ?>
-    
-    <!-- Carousel Start -->
-    <div class="container-fluid p-0 mb-4">
-        <div class="owl-carousel header-carousel position-relative">
-            <div class="owl-carousel-item position-relative">
-                <img class="img-fluid" src="img/background3.jpg" alt="">
-                <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center"
-                    style="background: rgba(24, 29, 56, .7);">
-                    <div class="container">
-                        <div class="row justify-content-start">
-                            <div class="col-sm-10 col-lg-8">
-                                <h5 class=" text-uppercase mb-3 animated slideInDown" style="color: #fb873f;">Selamat Datang di SMK Negeri 1 Buahdua</h5>
-                                <h1 class="display-3 text-white animated slideInDown">Belajar Lebih Interaktif dan Menyenangkan</h1>
-                                <p class=" text-white mb-4 pb-2">Akses materi pembelajaran, kuis, dan proyek interaktif yang memotivasi dan menginspirasi. Tingkatkan pengetahuan dan keterampilan Anda bersama kami.</p>
-                                
-                                <a href="signup.php" class="btn btn-light py-md-3 px-md-5 animated slideInRight">Gabung Sekarang</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="owl-carousel-item position-relative">
-                <img class="img-fluid" src="img/background2.jpg" alt="">
-                <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center"
-                    style="background: rgba(24, 29, 56, .7);">
-                    <div class="container">
-                        <div class="row justify-content-start">
-                            <div class="col-sm-10 col-lg-8">
-                                <h5 class=" text-uppercase mb-3 animated slideInDown" style="color: #fb873f;">Platform E-Learning Terbaik untuk Membantu Pembelajaran</h5>
-                                <h1 class="display-3 text-white animated slideInDown">Tingkatkan Kemampuan Praktek dengan Materi yang Ada.
-                                </h1>
-                                <p class=" text-white mb-4 pb-2">Temukan beragam kursus untuk mengembangkan keahlian di bidang teknologi, bisnis, seni, dan lainnya. Raih sertifikat dan siap berkompetisi di dunia kerja.</p>
-                                
-                                <a href="courses.php" class="btn btn-light py-md-3 px-md-5 animated slideInRight">Mulai Belajar</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Carousel End -->
+ 
+ <?php require 'components/carousel.php' ?>   
 
     <?php require 'components/jurusan.php' ?>
 
@@ -116,16 +76,13 @@ $all_product = $const->query($sql);
                 <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                     <div class="course-item shadow">
                         <div class="position-relative overflow-hidden text-light image">
-                            <img class="img-fluid" src="<?php echo $row["img"]; ?>" alt="">
+                            <img class="img-fluid" src="<?php echo $row["deskripsi"]; ?>" alt="">
                             <div style="position:absolute;top: 15px;left: 16px; font-size:12px; border-radius:3px; background-color:#fb873f;"
                                 class="px-2 py-1 fw-bold text-uppercase">FREE</div>
-
                         </div>
                         <div class="p-2 pb-0">
-
-                            <h5 class="mb-1"><a href="single.html" class="text-dark"><?php echo $row["nama"] ?> </a></h5>
+                            <h5 class="mb-1"><a href="single.html" class="text-dark"><?php echo $row["judul"] ?> </a></h5>
                         </div>
-                        
                         <div class="d-flex">
                             <small class="flex-fill text-left p-2 px-2"><i class="fa fa-clock me-2"></i>2.0
                                 Hrs</small>
@@ -161,8 +118,9 @@ $all_product = $const->query($sql);
                     </div>
                     </div>
                     <div class="col-lg-6 p-2 wow fadeInUp" data-wow-delay="0.3s">
-                        <h1 class="mb-2" style="color: #fb873f;">Lecturer of Courses</h1>
-                        <p class="mb-2 text-indigo">Your fun learning partner.</p>   
+                        <h1 class="mb-2" style="color: #fb873f;">Nama Guru</h1>
+                        <p class="mb-2 text-indigo">Mata Pelajaran</p>   
+                        <p class="mb-2 text-indigo">Deskripsi Mata Pelajaran</p>   
                     </div>
                 </div>
             </div>
